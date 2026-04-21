@@ -28,19 +28,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
-          themes={['light', 'dark']}
         >
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <div className="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 min-h-screen">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
