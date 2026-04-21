@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --font-pixel: 'VT323', monospace;
   --font-mono: 'JetBrains Mono', monospace;

@@ -1,28 +1,24 @@
 'use client';
 
 import { Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    const dark = theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    setIsDark(dark);
-    document.documentElement.classList.toggle('dark', dark);
+    setMounted(true);
   }, []);
 
-  const toggle = () => {
-    const newDark = !isDark;
-    setIsDark(newDark);
-    localStorage.setItem('theme', newDark ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', newDark);
-  };
+  if (!mounted) return null;
+
+  const isDark = theme === 'dark';
 
   return (
     <button
-      onClick={toggle}
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className="p-2 rounded-lg transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
       aria-label="Toggle dark mode"
     >
