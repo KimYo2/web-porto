@@ -27,6 +27,7 @@ export function BrandIcon({ name, source, icon, slug, color, size = 40, classNam
         height={size}
         className={className}
         unoptimized
+        loading="eager"
       />
     );
   }
