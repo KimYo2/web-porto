@@ -69,7 +69,7 @@ export function Skills() {
                         slug={skill.slug}
                         color={skill.color}
                         size={40}
-                        className="dark:invert"
+                        className=""
                       />
                     </div>
 

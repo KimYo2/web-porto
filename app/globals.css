@@ -30,12 +30,3 @@ html {
 html.dark ::selection {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
-/* Invert very dark icons in dark mode so they remain visible */
-.dark .dark-icon-safe[src*="/000000"],
-.dark .dark-icon-safe[src*="/181717"],
-.dark .dark-icon-safe[src*="/ffffff"],
-.dark .dark-icon-safe[src*="/ffffff"],
-.dark .dark-icon-safe[src*="/333333"] {
-  filter: invert(1) grayscale(100%) brightness(2);
-}
