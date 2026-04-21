@@ -22,6 +22,7 @@ export const skills: Skill[] = [
   { name: 'PHP', category: 'backend', source: 'iconify', icon: 'logos:php' },
   { name: 'Python', category: 'backend', source: 'iconify', icon: 'logos:python' },
   { name: 'Java', category: 'backend', source: 'iconify', icon: 'logos:java' },
+  { name: 'Node.js', category: 'backend', source: 'iconify', icon: 'devicon:nodejs' },
   { name: 'MySQL', category: 'backend', source: 'iconify', icon: 'logos:mysql' },
   { name: 'MongoDB', category: 'backend', source: 'simple', slug: 'mongodb', color: '47A248' },
   // Tools
