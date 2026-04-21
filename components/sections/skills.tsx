@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/section';
 import { AnimatedSection } from '@/components/animated-section';
 import { skills, type Skill } from '@/data/skills';
-import { cn } from '@/lib/utils';
 
 const categories = [
   { key: 'frontend', label: 'Frontend' },
   { key: 'backend', label: 'Backend' },
   { key: 'tools', label: 'Tools' },
+  { key: 'other', label: 'Other' },
 ] as const;
 
 export function Skills() {
@@ -26,7 +26,7 @@ export function Skills() {
           Skills
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
             <motion.div
               key={category.key}
@@ -35,21 +35,26 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4 pixel-font">
                 {category.label}
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="grid grid-cols-4 gap-3">
                 {groupedSkills[category.key]?.map((skill) => (
-                  <span
+                  <motion.div
                     key={skill.name}
-                    className={cn(
-                      'px-3 py-1.5 text-sm rounded-full',
-                      'bg-zinc-100 text-zinc-700',
-                      'dark:bg-zinc-800 dark:text-zinc-300'
-                    )}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3 }}
+                    className="flex flex-col items-center gap-1 group"
                   >
-                    {skill.name}
-                  </span>
+                    <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-colors group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700">
+                      <skill.icon className="w-6 h-6 text-zinc-700 dark:text-zinc-300" />
+                    </div>
+                    <span className="text-[10px] text-zinc-500 dark:text-zinc-400 text-center hidden group-hover:block">
+                      {skill.name}
+                    </span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
