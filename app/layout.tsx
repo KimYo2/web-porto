@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Inter } from "next/font/google";
+import { JetBrains_Mono, Press_Start_2P, VT323 } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const vt323 = VT323({
+  variable: "--font-pixel",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${jetbrainsMono.variable} font-sans min-h-screen flex flex-col antialiased bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50`}
+        className={`${vt323.variable} ${jetbrainsMono.variable} font-sans min-h-screen flex flex-col antialiased bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50`}
       >
         <ThemeProvider>
           <Navbar />

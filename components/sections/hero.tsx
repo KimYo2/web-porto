@@ -22,7 +22,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl md:text-6xl font-bold text-zinc-900 dark:text-zinc-50 mb-6"
+          className="text-5xl md:text-7xl font-bold text-zinc-900 dark:text-zinc-50 mb-6 pixel-font"
         >
           KimYo2
         </motion.h1>

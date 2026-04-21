@@ -31,7 +31,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="text-xl font-bold text-zinc-900 dark:text-zinc-50"
+            className="text-xl font-bold text-zinc-900 dark:text-zinc-50 pixel-font"
           >
             KimYo2
           </Link>
