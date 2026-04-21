@@ -1,31 +1,34 @@
 export interface Skill {
   name: string;
   category: 'frontend' | 'backend' | 'tools';
-  icon: string; // Iconify icon name (collection:icon-name)
+  source: 'iconify' | 'simple';
+  icon?: string;
+  slug?: string;
+  color?: string;
 }
 
 export const skills: Skill[] = [
   // Frontend
-  { name: 'Flutter', category: 'frontend', icon: 'logos:flutter' },
-  { name: 'Next.js', category: 'frontend', icon: 'logos:nextjs-icon' },
-  { name: 'React', category: 'frontend', icon: 'logos:react' },
-  { name: 'TypeScript', category: 'frontend', icon: 'logos:typescript-icon' },
-  { name: 'JavaScript', category: 'frontend', icon: 'logos:javascript' },
-  { name: 'HTML5', category: 'frontend', icon: 'devicon:html5' },
-  { name: 'CSS3', category: 'frontend', icon: 'devicon:css3' },
-  { name: 'Tailwind CSS', category: 'frontend', icon: 'logos:tailwindcss' },
+  { name: 'Flutter', category: 'frontend', source: 'iconify', icon: 'logos:flutter' },
+  { name: 'Next.js', category: 'frontend', source: 'iconify', icon: 'logos:nextjs-icon' },
+  { name: 'React', category: 'frontend', source: 'iconify', icon: 'logos:react' },
+  { name: 'TypeScript', category: 'frontend', source: 'iconify', icon: 'logos:typescript-icon' },
+  { name: 'JavaScript', category: 'frontend', source: 'iconify', icon: 'logos:javascript' },
+  { name: 'HTML5', category: 'frontend', source: 'iconify', icon: 'devicon:html5' },
+  { name: 'CSS3', category: 'frontend', source: 'iconify', icon: 'devicon:css3' },
+  { name: 'Tailwind CSS', category: 'frontend', source: 'simple', slug: 'tailwindcss', color: '06B6D4' },
   // Backend
-  { name: 'Laravel', category: 'backend', icon: 'logos:laravel' },
-  { name: 'PHP', category: 'backend', icon: 'logos:php' },
-  { name: 'Python', category: 'backend', icon: 'logos:python' },
-  { name: 'Java', category: 'backend', icon: 'logos:java' },
-  { name: 'MySQL', category: 'backend', icon: 'logos:mysql' },
-  { name: 'MongoDB', category: 'backend', icon: 'logos:mongodb' },
+  { name: 'Laravel', category: 'backend', source: 'iconify', icon: 'logos:laravel' },
+  { name: 'PHP', category: 'backend', source: 'iconify', icon: 'logos:php' },
+  { name: 'Python', category: 'backend', source: 'iconify', icon: 'logos:python' },
+  { name: 'Java', category: 'backend', source: 'iconify', icon: 'logos:java' },
+  { name: 'MySQL', category: 'backend', source: 'iconify', icon: 'logos:mysql' },
+  { name: 'MongoDB', category: 'backend', source: 'simple', slug: 'mongodb', color: '47A248' },
   // Tools
-  { name: 'Git', category: 'tools', icon: 'logos:git' },
-  { name: 'GitHub', category: 'tools', icon: 'logos:github' },
-  { name: 'VS Code', category: 'tools', icon: 'logos:vscode' },
-  { name: 'Figma', category: 'tools', icon: 'logos:figma' },
-  { name: 'Docker', category: 'tools', icon: 'logos:docker' },
-  { name: 'Postman', category: 'tools', icon: 'logos:postman' },
+  { name: 'Git', category: 'tools', source: 'simple', slug: 'git', color: 'F05032' },
+  { name: 'GitHub', category: 'tools', source: 'simple', slug: 'github', color: '181717' },
+  { name: 'VS Code', category: 'tools', source: 'iconify', icon: 'logos:vscode' },
+  { name: 'Figma', category: 'tools', source: 'iconify', icon: 'logos:figma' },
+  { name: 'Docker', category: 'tools', source: 'simple', slug: 'docker', color: '2496ED' },
+  { name: 'Postman', category: 'tools', source: 'simple', slug: 'postman', color: 'FF6C37' },
 ];

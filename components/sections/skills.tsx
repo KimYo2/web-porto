@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/section';
 import { AnimatedSection } from '@/components/animated-section';
-import { IconifyIcon } from '@/components/ui/iconify-icon';
+import { BrandIcon } from '@/components/ui/brand-icon';
 import { skills, type Skill } from '@/data/skills';
 
 const categories = [
@@ -62,10 +62,14 @@ export function Skills() {
                     className="relative flex flex-col items-center group"
                   >
                     <div className="w-16 h-16 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 cursor-default p-2">
-                      <IconifyIcon
+                      <BrandIcon
+                        name={skill.name}
+                        source={skill.source}
                         icon={skill.icon}
+                        slug={skill.slug}
+                        color={skill.color}
                         size={40}
-                        className="dark:text-white"
+                        className="dark:invert"
                       />
                     </div>
 
