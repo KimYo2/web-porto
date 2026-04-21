@@ -3,6 +3,7 @@ export interface Skill {
   category: 'frontend' | 'backend' | 'tools' | 'other';
   slug: string;
   color?: string;
+  custom?: boolean;
 }
 
 export const skills: Skill[] = [
@@ -25,7 +26,7 @@ export const skills: Skill[] = [
   // Tools
   { name: 'Git', category: 'tools', slug: 'git', color: 'F05032' },
   { name: 'GitHub', category: 'tools', slug: 'github', color: '181717' },
-  { name: 'VS Code', category: 'tools', slug: 'code', color: '007ACC' },
+  { name: 'VSCode', category: 'tools', slug: 'visualstudiocode', color: '007ACC', custom: true },
   { name: 'Figma', category: 'tools', slug: 'figma', color: 'F24E1E' },
   { name: 'Docker', category: 'tools', slug: 'docker', color: '2496ED' },
   { name: 'Postman', category: 'tools', slug: 'postman', color: 'FF6C37' },

@@ -68,6 +68,7 @@ export function Skills() {
                         size={40}
                         label={skill.name}
                         className="dark-icon-safe"
+                        custom={skill.custom}
                       />
                     </div>
 
