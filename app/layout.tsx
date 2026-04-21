@@ -6,38 +6,39 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const vt323 = VT323({
-  variable: "--font-pixel",
-  weight: "400",
-  subsets: ["latin"],
+	variable: "--font-pixel",
+	weight: "400",
+	subsets: ["latin"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
+	variable: "--font-mono",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "KimYo2 | Full Stack Developer",
-  description: "Portfolio of KimYo2 - Full Stack Developer specializing in Flutter & Laravel",
+	title: "lunae | Full Stack Developer",
+	description:
+		"Portfolio of lunae - Full Stack Developer specializing in Flutter & Laravel",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        suppressHydrationWarning
-        className={`${vt323.variable} ${jetbrainsMono.variable} font-sans min-h-screen flex flex-col antialiased bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50`}
-      >
-        <ThemeProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" suppressHydrationWarning>
+			<body
+				suppressHydrationWarning
+				className={`${vt323.variable} ${jetbrainsMono.variable} font-sans min-h-screen flex flex-col antialiased bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50`}
+			>
+				<ThemeProvider>
+					<Navbar />
+					<main className="flex-1">{children}</main>
+					<Footer />
+				</ThemeProvider>
+			</body>
+		</html>
+	);
 }
