@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-20 bg-white dark:bg-zinc-950">
       <div className="mx-auto max-w-3xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export function Hero() {
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <Link href="#about" aria-label="Scroll down">
-            <ArrowDown className="w-6 h-6 text-zinc-400 animate-bounce" />
+            <ArrowDown className="w-6 h-6 text-zinc-400 dark:text-zinc-600 animate-bounce" />
           </Link>
         </motion.div>
       </div>
