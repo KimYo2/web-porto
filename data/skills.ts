@@ -11,9 +11,9 @@ export const skills: Skill[] = [
   { name: 'React', category: 'frontend', icon: 'logos:react' },
   { name: 'TypeScript', category: 'frontend', icon: 'logos:typescript-icon' },
   { name: 'JavaScript', category: 'frontend', icon: 'logos:javascript' },
-  { name: 'HTML5', category: 'frontend', icon: 'logos:html5' },
-  { name: 'CSS3', category: 'frontend', icon: 'logos:css3' },
-  { name: 'Tailwind CSS', category: 'frontend', icon: 'logos:tailwindcss-icon' },
+  { name: 'HTML5', category: 'frontend', icon: 'devicon:html5' },
+  { name: 'CSS3', category: 'frontend', icon: 'devicon:css3' },
+  { name: 'Tailwind CSS', category: 'frontend', icon: 'logos:tailwindcss' },
   // Backend
   { name: 'Laravel', category: 'backend', icon: 'logos:laravel' },
   { name: 'PHP', category: 'backend', icon: 'logos:php' },
@@ -22,10 +22,10 @@ export const skills: Skill[] = [
   { name: 'MySQL', category: 'backend', icon: 'logos:mysql' },
   { name: 'MongoDB', category: 'backend', icon: 'logos:mongodb' },
   // Tools
-  { name: 'Git', category: 'tools', icon: 'logos:git-icon' },
-  { name: 'GitHub', category: 'tools', icon: 'logos:github-icon' },
-  { name: 'VS Code', category: 'tools', icon: 'logos:visual-studio-code' },
+  { name: 'Git', category: 'tools', icon: 'logos:git' },
+  { name: 'GitHub', category: 'tools', icon: 'logos:github' },
+  { name: 'VS Code', category: 'tools', icon: 'logos:vscode' },
   { name: 'Figma', category: 'tools', icon: 'logos:figma' },
-  { name: 'Docker', category: 'tools', icon: 'logos:docker-icon' },
+  { name: 'Docker', category: 'tools', icon: 'logos:docker' },
   { name: 'Postman', category: 'tools', icon: 'logos:postman' },
 ];
