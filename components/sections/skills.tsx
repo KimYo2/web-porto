@@ -61,11 +61,11 @@ export function Skills() {
                     transition={{ duration: 0.3 }}
                     className="relative flex flex-col items-center group"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 cursor-default p-2">
+                    <div className="w-16 h-16 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 cursor-default p-2">
                       <SimpleIcon
                         slug={skill.slug}
                         color={skill.color}
-                        size={32}
+                        size={40}
                         label={skill.name}
                         className="dark-icon-safe"
                       />
