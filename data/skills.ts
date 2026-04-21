@@ -10,7 +10,7 @@ export interface Skill {
 export const skills: Skill[] = [
   // Frontend
   { name: 'Flutter', category: 'frontend', source: 'iconify', icon: 'logos:flutter' },
-  { name: 'Next.js', category: 'frontend', source: 'iconify', icon: 'logos:nextjs-icon' },
+  { name: 'Next.js', category: 'frontend', source: 'iconify', icon: 'devicon:nextjs' },
   { name: 'React', category: 'frontend', source: 'iconify', icon: 'logos:react' },
   { name: 'TypeScript', category: 'frontend', source: 'iconify', icon: 'logos:typescript-icon' },
   { name: 'JavaScript', category: 'frontend', source: 'iconify', icon: 'logos:javascript' },
