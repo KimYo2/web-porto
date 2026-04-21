@@ -16,7 +16,7 @@ export function SimpleIcon({
   label,
 }: SimpleIconProps) {
   const iconUrl = color
-    ? `https://cdn.simpleicons.org/${slug}/${color.replace('#', '')}`
+    ? `https://cdn.simpleicons.org/${slug}/${color}`
     : `https://cdn.simpleicons.org/${slug}`;
 
   return (

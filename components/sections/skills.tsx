@@ -10,7 +10,6 @@ const categories = [
   { key: 'frontend', label: 'Frontend' },
   { key: 'backend', label: 'Backend' },
   { key: 'tools', label: 'Tools' },
-  { key: 'other', label: 'Other' },
 ] as const;
 
 const stagger = {
@@ -41,9 +40,9 @@ export function Skills() {
           Skills
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex flex-col gap-8">
           {categories.map((category) => (
-            <div key={category.key}>
+            <div key={category.key} className="w-full">
               <h3 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4 pixel-font">
                 {category.label}
               </h3>
@@ -53,20 +52,20 @@ export function Skills() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="grid grid-cols-4 gap-3"
+                className="flex flex-wrap gap-4"
               >
                 {groupedSkills[category.key]?.map((skill) => (
                   <motion.div
                     key={skill.name}
                     variants={item}
                     transition={{ duration: 0.3 }}
-                    className="relative flex flex-col items-center gap-1 group"
+                    className="relative flex flex-col items-center group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 cursor-default">
+                    <div className="w-14 h-14 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 cursor-default p-2">
                       <SimpleIcon
                         slug={skill.slug}
                         color={skill.color}
-                        size={24}
+                        size={32}
                         label={skill.name}
                         className="dark-icon-safe"
                       />
