@@ -11,7 +11,7 @@ export function Contact() {
       <AnimatedSection>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            <motion.h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
+            <motion.h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-4 pixel-font">
               Get in Touch
             </motion.h2>
             <motion.p className="text-zinc-600 dark:text-zinc-400 mb-6">

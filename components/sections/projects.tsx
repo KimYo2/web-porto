@@ -17,7 +17,7 @@ export function Projects() {
   return (
     <Section id="projects">
       <AnimatedSection>
-        <motion.h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-8">
+        <motion.h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-8 pixel-font">
           Projects
         </motion.h2>
 

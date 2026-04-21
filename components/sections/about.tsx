@@ -8,7 +8,7 @@ export function About() {
   return (
     <Section id="about">
       <AnimatedSection>
-        <motion.h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-6">
+        <motion.h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-6 pixel-font">
           About Me
         </motion.h2>
 
