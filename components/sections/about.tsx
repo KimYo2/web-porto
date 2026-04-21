@@ -15,28 +15,28 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <motion.div>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              I&apos;m a passionate full-stack developer with experience building
-              scalable web applications. I specialize in React, Next.js, and
-              TypeScript, with a strong foundation in backend technologies.
+              Saya seorang pengembang Full Stack dengan pengalaman dalam membangun
+              aplikasi web dan mobile. Fokus pada teknologi modern seperti Flutter
+              untuk mobile dan Laravel untuk backend.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              My approach to development focuses on writing clean, maintainable
-              code and creating intuitive user experiences. I believe in continuous
-              learning and staying up-to-date with the latest web technologies.
+              Selama magang di BPS (Badan Pusat Statistik), saya membangun program
+              untuk pengolahan data statistik. Pengalaman ini memberikan saya
+              pemahaman tentang pentingnya data yang akurat dan efisien.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              When I&apos;m not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing knowledge with the
-              developer community.
+              Saya percaya bahwa teknologi harus membantu menyelesaikan masalah
+              nyata. Saya terus belajar teknologi baru dan berkontribusi pada
+              proyek open source.
             </p>
           </motion.div>
 
           <motion.div className="grid grid-cols-2 gap-4">
             {[
-              { label: 'Years Experience', value: '5+' },
-              { label: 'Projects Completed', value: '30+' },
-              { label: 'Happy Clients', value: '20+' },
-              { label: 'Technologies', value: '15+' },
+              { label: 'Projects', value: '10+' },
+              { label: 'Technologies', value: '8+' },
+              { label: 'Internship', value: 'BPS' },
+              { label: 'University', value: 'Active' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

@@ -15,7 +15,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4"
         >
-          Hello, I&apos;m a
+          Hi, I&apos;m
         </motion.p>
 
         <motion.h1
@@ -24,7 +24,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl md:text-6xl font-bold text-zinc-900 dark:text-zinc-50 mb-6"
         >
-          Full Stack Developer
+          KimYo2
         </motion.h1>
 
         <motion.p
@@ -33,8 +33,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg text-zinc-600 dark:text-zinc-400 mb-8 max-w-xl mx-auto"
         >
-          I build modern, responsive, and performant web applications with a focus on
-          user experience and clean code.
+          Full Stack Developer | Flutter & Laravel Enthusiast | Fresh Graduate
         </motion.p>
 
         <motion.div

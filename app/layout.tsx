@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Full Stack Developer",
-  description: "A modern portfolio showcasing my work as a full stack developer.",
+  title: "KimYo2 | Full Stack Developer",
+  description: "Portfolio of KimYo2 - Full Stack Developer specializing in Flutter & Laravel",
 };
 
 export default function RootLayout({

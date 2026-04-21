@@ -33,7 +33,7 @@ export function Navbar() {
             href="/"
             className="text-xl font-bold text-zinc-900 dark:text-zinc-50"
           >
-            Portfolio
+            KimYo2
           </Link>
 
           <div className="hidden md:flex items-center gap-6">

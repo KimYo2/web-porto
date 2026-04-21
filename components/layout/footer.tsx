@@ -16,9 +16,9 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const socialLinks: { icon: React.ComponentType<React.SVGProps<SVGSVGElement>>; href: string; label: string }[] = [
-  { icon: GithubIcon, href: 'https://github.com', label: 'GitHub' },
+  { icon: GithubIcon, href: 'https://github.com/KimYo2', label: 'GitHub' },
   { icon: LinkedinIcon, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:hello@example.com', label: 'Email' },
+  { icon: Mail, href: 'mailto:kimyo2@example.com', label: 'Email' },
 ];
 
 export function Footer() {
@@ -26,7 +26,7 @@ export function Footer() {
     <footer className="py-8 px-6 border-t border-zinc-200 dark:border-zinc-800">
       <div className="mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-zinc-500 dark:text-zinc-400">
-          © {new Date().getFullYear()} Portfolio. All rights reserved.
+          © {new Date().getFullYear()} KimYo2. All rights reserved.
         </p>
 
         <div className="flex items-center gap-4">
