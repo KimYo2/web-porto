@@ -13,7 +13,7 @@ export const experiences: Experience[] = [
     company: 'Badan Pusat Statistik (BPS)',
     role: 'Internship - Programmer',
     period: '2024',
-    description: 'Membangun program untuk pengolahan dan visualisasi data statistik daerah.',
+    description: 'Membangun dan mengembangkan sistem informasi inventaris parish (SIAP Inventaris) untuk pengelolaan data inventaris barang di BPS.',
     current: false,
   },
   {
@@ -21,6 +21,6 @@ export const experiences: Experience[] = [
     company: 'Universitas',
     role: 'Mahasiswa Teknik Informatika',
     period: '2022 - Sekarang',
-    description: 'Mahasiswa aktif mengerjakan berbagai proyek tugas kampus menggunakan Python, Laravel, Flutter, dan lainnya.',
+    description: 'Mahasiswa aktif mengerjakan berbagai proyek tugas kampus menggunakan Python, Laravel, Flutter, dan teknologi lainnya.',
   },
 ];

@@ -20,9 +20,9 @@ export function About() {
               untuk mobile dan Laravel untuk backend.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-              Selama magang di BPS (Badan Pusat Statistik), saya membangun program
-              untuk pengolahan data statistik. Pengalaman ini memberikan saya
-              pemahaman tentang pentingnya data yang akurat dan efisien.
+              Selama magang di BPS (Badan Pusat Statistik), saya membangun sistem SIAP Inventaris
+              untuk pengelolaan data inventaris barang parish. Pengalaman ini memberikan saya
+              pemahaman tentang pentingnya data yang akurat dan efisien dalam sebuah sistem.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
               Saya percaya bahwa teknologi harus membantu menyelesaikan masalah
