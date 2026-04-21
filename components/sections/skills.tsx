@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/section';
 import { AnimatedSection } from '@/components/animated-section';
+import { SimpleIcon } from '@/components/ui/simple-icon';
 import { skills, type Skill } from '@/data/skills';
 
 const categories = [
@@ -11,6 +12,20 @@ const categories = [
   { key: 'tools', label: 'Tools' },
   { key: 'other', label: 'Other' },
 ] as const;
+
+const stagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: { opacity: 1, scale: 1 },
+};
 
 export function Skills() {
   const groupedSkills = skills.reduce((acc, skill) => {
@@ -22,42 +37,48 @@ export function Skills() {
   return (
     <Section id="skills">
       <AnimatedSection>
-        <motion.h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-8 pixel-font">
+        <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-8 pixel-font">
           Skills
-        </motion.h2>
+        </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category) => (
-            <motion.div
-              key={category.key}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4 pixel-font">
+            <div key={category.key}>
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4 pixel-font">
                 {category.label}
               </h3>
-              <div className="grid grid-cols-4 gap-3">
+
+              <motion.div
+                variants={stagger}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                className="grid grid-cols-4 gap-3"
+              >
                 {groupedSkills[category.key]?.map((skill) => (
                   <motion.div
                     key={skill.name}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                    variants={item}
                     transition={{ duration: 0.3 }}
-                    className="flex flex-col items-center gap-1 group"
+                    className="relative flex flex-col items-center gap-1 group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-colors group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700">
-                      <skill.icon className="w-6 h-6 text-zinc-700 dark:text-zinc-300" />
+                    <div className="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 cursor-default">
+                      <SimpleIcon
+                        slug={skill.slug}
+                        color={skill.color}
+                        size={24}
+                        label={skill.name}
+                        className="dark-icon-safe"
+                      />
                     </div>
-                    <span className="text-[10px] text-zinc-500 dark:text-zinc-400 text-center hidden group-hover:block">
+
+                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] bg-zinc-900 dark:bg-zinc-50 text-zinc-50 dark:text-zinc-900 px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
                       {skill.name}
                     </span>
                   </motion.div>
                 ))}
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           ))}
         </div>
       </AnimatedSection>

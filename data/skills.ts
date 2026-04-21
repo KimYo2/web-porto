@@ -1,40 +1,32 @@
-import { 
-  Code2, 
-  Database, 
-  Smartphone, 
-  Server, 
-  Palette, 
-  Terminal, 
-  GitBranch, 
-  PenTool,
-  FileCode, 
-  Globe,
-  Box,
-  Workflow,
-  type LucideIcon
-} from 'lucide-react';
-
 export interface Skill {
   name: string;
   category: 'frontend' | 'backend' | 'tools' | 'other';
-  icon: LucideIcon;
+  slug: string;
+  color?: string;
 }
 
 export const skills: Skill[] = [
-  { name: 'Flutter', category: 'frontend', icon: Smartphone },
-  { name: 'Next.js', category: 'frontend', icon: Globe },
-  { name: 'React', category: 'frontend', icon: Code2 },
-  { name: 'TypeScript', category: 'frontend', icon: FileCode },
-  { name: 'HTML/CSS', category: 'frontend', icon: Palette },
-  { name: 'JavaScript', category: 'frontend', icon: Code2 },
-  { name: 'Laravel', category: 'backend', icon: Server },
-  { name: 'PHP', category: 'backend', icon: Code2 },
-  { name: 'Python', category: 'backend', icon: Terminal },
-  { name: 'Java', category: 'backend', icon: Server },
-  { name: 'MySQL', category: 'backend', icon: Database },
-  { name: 'Git', category: 'tools', icon: GitBranch },
-  { name: 'GitHub', category: 'tools', icon: Box },
-  { name: 'VS Code', category: 'tools', icon: FileCode },
-  { name: 'Figma', category: 'tools', icon: PenTool },
-  { name: 'Docker', category: 'other', icon: Workflow },
+  // Frontend
+  { name: 'Flutter', category: 'frontend', slug: 'flutter', color: '#02569B' },
+  { name: 'Next.js', category: 'frontend', slug: 'nextdotjs', color: '#000000' },
+  { name: 'React', category: 'frontend', slug: 'react', color: '#61DAFB' },
+  { name: 'TypeScript', category: 'frontend', slug: 'typescript', color: '#3178C6' },
+  { name: 'JavaScript', category: 'frontend', slug: 'javascript', color: '#F7DF1E' },
+  { name: 'HTML5', category: 'frontend', slug: 'html5', color: '#E34F26' },
+  { name: 'CSS3', category: 'frontend', slug: 'css3', color: '#1572B6' },
+  { name: 'Tailwind CSS', category: 'frontend', slug: 'tailwindcss', color: '#06B6D4' },
+  // Backend
+  { name: 'Laravel', category: 'backend', slug: 'laravel', color: '#FF2D20' },
+  { name: 'PHP', category: 'backend', slug: 'php', color: '#777BB4' },
+  { name: 'Python', category: 'backend', slug: 'python', color: '#3776AB' },
+  { name: 'Java', category: 'backend', slug: 'openjdk', color: '#437291' },
+  { name: 'MySQL', category: 'backend', slug: 'mysql', color: '#4479A1' },
+  { name: 'MongoDB', category: 'backend', slug: 'mongodb', color: '#47A248' },
+  // Tools
+  { name: 'Git', category: 'tools', slug: 'git', color: '#F05032' },
+  { name: 'GitHub', category: 'tools', slug: 'github', color: '#181717' },
+  { name: 'VS Code', category: 'tools', slug: 'visualstudiocode', color: '#007ACC' },
+  { name: 'Figma', category: 'tools', slug: 'figma', color: '#F24E1E' },
+  { name: 'Docker', category: 'tools', slug: 'docker', color: '#2496ED' },
+  { name: 'Postman', category: 'tools', slug: 'postman', color: '#FF6C37' },
 ];
