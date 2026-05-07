@@ -1,5 +1,6 @@
 'use client';
 
+/* Redesigned Skills section using Rule of Thirds: asymmetric category distribution and flexible icon flow */
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/section';
 import { AnimatedSection } from '@/components/animated-section';
@@ -34,16 +35,21 @@ export function Skills() {
   }, {} as Record<Skill['category'], Skill[]>);
 
   return (
-    <Section id="skills">
+    <Section id="skills" className="py-24 md:py-32">
       <AnimatedSection>
-        <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 mb-8 pixel-font">
-          Skills
-        </h2>
+        <div className="mb-12 text-left">
+          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2">
+            Tech Stack
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-zinc-50 pixel-font">
+            Skills
+          </h2>
+        </div>
 
-        <div className="flex flex-col gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {categories.map((category) => (
-            <div key={category.key} className="w-full">
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-4 pixel-font">
+            <div key={category.key} className="flex flex-col">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-6 pixel-font">
                 {category.label}
               </h3>
 
@@ -52,7 +58,7 @@ export function Skills() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap gap-3"
               >
                 {groupedSkills[category.key]?.map((skill) => (
                   <motion.div
@@ -61,14 +67,14 @@ export function Skills() {
                     transition={{ duration: 0.3 }}
                     className="relative flex flex-col items-center group"
                   >
-                    <div className="w-16 h-16 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 cursor-default p-2">
+                    <div className="w-14 h-14 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center transition-all group-hover:scale-110 group-hover:bg-zinc-200 dark:group-hover:bg-zinc-700 cursor-default p-2">
                       <BrandIcon
                         name={skill.name}
                         source={skill.source}
                         icon={skill.icon}
                         slug={skill.slug}
                         color={skill.color}
-                        size={40}
+                        size={32}
                         className="dark:text-white"
                       />
                     </div>

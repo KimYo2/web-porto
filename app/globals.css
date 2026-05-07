@@ -30,3 +30,9 @@ html {
 html.dark ::selection {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Invert near-black Simple Icons in dark mode for visibility */
+.dark img[src*="cdn.simpleicons.org"][src*="000000"],
+.dark img[src*="cdn.simpleicons.org"][src*="181717"] {
+  filter: invert(1);
+}
