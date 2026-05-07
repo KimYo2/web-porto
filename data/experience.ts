@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
 		id: "1",
 		company: "Badan Pusat Statistik (BPS)",
 		role: "Internship - Programmer",
-		period: "2025",
+		period: "2026",
 		description:
 			"Membangun dan mengembangkan sistem informasi inventaris parish (SIAP Inventaris) untuk pengelolaan data inventaris barang di BPS.",
 		current: false,
